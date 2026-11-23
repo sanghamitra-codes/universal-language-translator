@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Notice Translation Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Community Notice Translation Tool</h1>
+    <p>Bridging multilingual communication gaps across Indian communities</p>
+  </header>
+
+  <main class="main-container">
+    
+    <!-- Section 1: Notice Creation Form -->
+    <section class="card">
+      <h2>📢 Publish New Community Notice</h2>
+      <form id="noticeForm">
+        
+        <div class="form-group">
+          <label for="noticeTitle">Notice Title:</label>
+          <input type="text" id="noticeTitle" placeholder="e.g. Health Camp / Water Supply Interruption" required>
+        </div>
+
+        <div class="form-group">
+          <label for="noticeCategory">Category:</label>
+          <select id="noticeCategory">
+            <option value="General">General Announcement</option>
+            <option value="Urgent">Emergency / Urgent</option>
+            <option value="Utilities">Utilities (Water/Electricity)</option>
+            <option value="Health">Health & Sanitation</option>
+            <option value="Events">Community Events</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="originalLang">Publishing Language (Original):</label>
+          <select id="originalLang">
+            <option value="English">English</option>
+            <option value="Hindi">Hindi (हिंदी)</option>
+            <option value="Punjabi">Punjabi (ਪੰਜਾਬੀ)</option>
+            <option value="Bengali">Bengali (বাংলা)</option>
+            <option value="Tamil">Tamil (தமிழ்)</option>
+            <option value="Telugu">Telugu (తెలుగు)</option>
+            <option value="Marathi">Marathi (मराठी)</option>
+            <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+            <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            <option value="Malayalam">Malayalam (മലയാളം)</option>
+            <option value="Odia">Odia (ଓଡ଼ିਆ)</option>
+            <option value="Assamese">Assamese (অসমীয়া)</option>
+            <option value="Urdu">Urdu (اردو)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="noticeContent">Notice Content:</label>
+          <textarea id="noticeContent" rows="4" placeholder="Enter full details of the notice..." required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">Publish Community Notice</button>
+      </form>
+    </section>
+
+    <!-- Section 2: Multilingual Notice Board -->
+    <section class="card">
+      <h2>📋 Published Community Notices</h2>
+      
+      <!-- Viewing Controls -->
+      <div class="filter-group">
+        <div class="filter-item">
+          <label for="viewLang">Translate & View In:</label>
+          <select id="viewLang">
+            <option value="English">English</option>
+            <option value="Hindi">Hindi (हिंदी)</option>
+            <option value="Punjabi">Punjabi (ਪੰਜਾਬੀ)</option>
+            <option value="Bengali">Bengali (বাংলা)</option>
+            <option value="Tamil">Tamil (தமிழ்)</option>
+            <option value="Telugu">Telugu (తెలుగు)</option>
+            <option value="Marathi">Marathi (मराठी)</option>
+            <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+            <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            <option value="Malayalam">Malayalam (മലയാളം)</option>
+            <option value="Odia">Odia (ଓଡ଼ିਆ)</option>
+            <option value="Assamese">Assamese (অসমীয়া)</option>
+            <option value="Urdu">Urdu (اردو)</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="searchQuery">Search Notices:</label>
+          <input type="text" id="searchQuery" placeholder="Search by keyword...">
+        </div>
+      </div>
+
+      <!-- Notice List Container -->
+      <div id="noticesList" class="notices-list">
+        <!-- Dynamic notices rendered by JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
